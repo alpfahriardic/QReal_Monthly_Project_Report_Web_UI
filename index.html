@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+  <meta name="description" content="Report" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <title>Qreal Montly Report</title>
+</head>
+
+<body>
+
+  <div class="export-canvas" id="capture">
+
+    <header class="header padding-sides">
+      <div class="header-left-text-icon snapchat">
+        <div class="svg-icon-container">
+          <svg class="platform-icon" width="14" height="14" viewBox="0 0 14 14">
+            <path
+              d="m13.95,10.08c-.1-.26-.28-.41-.49-.52-.04-.02-.08-.04-.11-.06-.06-.03-.13-.06-.19-.1-.66-.35-1.17-.79-1.53-1.31-.1-.15-.19-.3-.26-.46-.03-.09-.03-.14,0-.18.02-.04.05-.06.09-.09.11-.08.23-.15.31-.2.14-.09.25-.16.33-.21.27-.19.46-.39.58-.61.17-.31.19-.68.06-1.02-.18-.47-.62-.76-1.16-.76-.11,0-.23.01-.34.04-.03,0-.06.01-.09.02,0-.32,0-.66-.03-1-.1-1.18-.51-1.79-.94-2.28-.28-.31-.6-.57-.96-.77-.65-.37-1.39-.56-2.2-.56s-1.54.19-2.19.56c-.36.2-.68.46-.96.77-.43.49-.84,1.11-.94,2.28-.03.34-.04.68-.03,1-.03,0-.06-.01-.09-.02-.11-.03-.23-.04-.34-.04-.54,0-.98.29-1.16.76-.13.33-.11.7.06,1.02.12.23.31.43.58.61.07.05.18.12.33.21.08.05.19.12.3.19.04.03.07.06.1.1.02.05.03.1-.01.19-.07.16-.16.31-.26.45-.35.51-.85.94-1.48,1.29-.34.18-.69.3-.84.7-.11.3-.04.65.24.94.1.11.23.2.36.27.28.15.57.27.88.35.06.02.12.04.18.08.1.09.09.23.23.43.07.1.16.19.26.26.29.2.61.21.96.23.31.01.66.02,1.07.16.17.05.34.16.54.29.48.3,1.14.7,2.25.7s1.77-.41,2.25-.7c.2-.12.37-.23.53-.28.4-.13.75-.15,1.07-.16.34-.01.67-.03.96-.23.12-.09.22-.19.29-.32.1-.17.1-.29.19-.37.05-.04.11-.06.16-.08.31-.08.61-.2.89-.35.14-.08.27-.18.38-.29h0c.28-.29.35-.63.24-.92Zm-.98.53c-.6.33-1,.29-1.3.49-.26.17-.11.53-.3.66-.24.16-.93-.01-1.82.29-.74.24-1.21.95-2.54.95s-1.79-.7-2.54-.95c-.89-.3-1.59-.12-1.82-.29-.19-.13-.04-.5-.3-.66-.31-.2-.71-.16-1.3-.49-.38-.21-.16-.34-.04-.4,2.17-1.05,2.51-2.67,2.53-2.79.02-.15.04-.26-.12-.41-.15-.14-.84-.57-1.03-.7-.31-.22-.45-.44-.35-.71.07-.19.25-.26.43-.26.06,0,.11,0,.17.02.35.08.68.25.88.3.03,0,.05.01.07.01.1,0,.14-.05.13-.17-.02-.38-.08-1.12-.01-1.81.08-.95.39-1.42.75-1.83.18-.2.99-1.07,2.56-1.07s2.39.86,2.56,1.06c.36.41.67.89.75,1.83.06.69,0,1.43-.02,1.81,0,.13.03.17.13.17.03,0,.05,0,.07-.01.19-.05.53-.22.88-.3.06-.01.11-.02.17-.02.18,0,.36.07.43.26.1.27-.04.49-.35.71-.19.13-.88.56-1.03.7-.16.15-.14.26-.12.41.01.12.36,1.74,2.53,2.79.13.06.34.19-.04.4Z"
+              fill="#959595" />
+          </svg>
+        </div>
+        <p class="header-left-text">Snapchat</p>
+      </div>
+      <div class="header-left-text-icon instagram disabled">
+        <div class="svg-icon-container">
+          <svg class="platform-icon" width="14" height="14" viewBox="0 0 14 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_210_2032)">
+              <path
+                d="M7 1.26055C8.87031 1.26055 9.0918 1.26875 9.82734 1.30156C10.5109 1.33164 10.8801 1.44648 11.1262 1.54219C11.4516 1.66797 11.6867 1.82109 11.9301 2.06445C12.1762 2.31055 12.3266 2.54297 12.4523 2.86836C12.548 3.11445 12.6629 3.48633 12.693 4.16719C12.7258 4.90547 12.734 5.12695 12.734 6.99453C12.734 8.86484 12.7258 9.08633 12.693 9.82188C12.6629 10.5055 12.548 10.8746 12.4523 11.1207C12.3266 11.4461 12.1734 11.6812 11.9301 11.9246C11.684 12.1707 11.4516 12.3211 11.1262 12.4469C10.8801 12.5426 10.5082 12.6574 9.82734 12.6875C9.08906 12.7203 8.86758 12.7285 7 12.7285C5.12969 12.7285 4.9082 12.7203 4.17266 12.6875C3.48906 12.6574 3.11992 12.5426 2.87383 12.4469C2.54844 12.3211 2.31328 12.168 2.06992 11.9246C1.82383 11.6785 1.67344 11.4461 1.54766 11.1207C1.45195 10.8746 1.33711 10.5027 1.30703 9.82188C1.27422 9.08359 1.26602 8.86211 1.26602 6.99453C1.26602 5.12422 1.27422 4.90273 1.30703 4.16719C1.33711 3.48359 1.45195 3.11445 1.54766 2.86836C1.67344 2.54297 1.82656 2.30781 2.06992 2.06445C2.31602 1.81836 2.54844 1.66797 2.87383 1.54219C3.11992 1.44648 3.4918 1.33164 4.17266 1.30156C4.9082 1.26875 5.12969 1.26055 7 1.26055ZM7 0C5.09961 0 4.86172 0.00820312 4.11523 0.0410156C3.37148 0.0738281 2.86016 0.194141 2.41719 0.366406C1.95508 0.546875 1.56406 0.784766 1.17578 1.17578C0.784766 1.56406 0.546875 1.95508 0.366406 2.41445C0.194141 2.86016 0.0738281 3.36875 0.0410156 4.1125C0.00820313 4.86172 0 5.09961 0 7C0 8.90039 0.00820313 9.13828 0.0410156 9.88477C0.0738281 10.6285 0.194141 11.1398 0.366406 11.5828C0.546875 12.0449 0.784766 12.4359 1.17578 12.8242C1.56406 13.2125 1.95508 13.4531 2.41445 13.6309C2.86016 13.8031 3.36875 13.9234 4.1125 13.9562C4.85898 13.9891 5.09687 13.9973 6.99727 13.9973C8.89766 13.9973 9.13555 13.9891 9.88203 13.9562C10.6258 13.9234 11.1371 13.8031 11.5801 13.6309C12.0395 13.4531 12.4305 13.2125 12.8187 12.8242C13.207 12.4359 13.4477 12.0449 13.6254 11.5855C13.7977 11.1398 13.918 10.6313 13.9508 9.8875C13.9836 9.14102 13.9918 8.90312 13.9918 7.00273C13.9918 5.10234 13.9836 4.86445 13.9508 4.11797C13.918 3.37422 13.7977 2.86289 13.6254 2.41992C13.4531 1.95508 13.2152 1.56406 12.8242 1.17578C12.4359 0.7875 12.0449 0.546875 11.5855 0.369141C11.1398 0.196875 10.6313 0.0765625 9.8875 0.04375C9.13828 0.00820313 8.90039 0 7 0Z"
+                fill="#959595" />
+              <path
+                d="M7 3.4043C5.01484 3.4043 3.4043 5.01484 3.4043 7C3.4043 8.98516 5.01484 10.5957 7 10.5957C8.98516 10.5957 10.5957 8.98516 10.5957 7C10.5957 5.01484 8.98516 3.4043 7 3.4043ZM7 9.33242C5.71211 9.33242 4.66758 8.28789 4.66758 7C4.66758 5.71211 5.71211 4.66758 7 4.66758C8.28789 4.66758 9.33242 5.71211 9.33242 7C9.33242 8.28789 8.28789 9.33242 7 9.33242Z"
+                fill="#959595" />
+              <path
+                d="M11.5773 3.26231C11.5773 3.72715 11.2 4.10176 10.7379 4.10176C10.273 4.10176 9.89844 3.72442 9.89844 3.26231C9.89844 2.79746 10.2758 2.42285 10.7379 2.42285C11.2 2.42285 11.5773 2.8002 11.5773 3.26231Z"
+                fill="#959595" />
+            </g>
+            <defs>
+              <clipPath id="clip0_210_2032">
+                <rect width="14" height="14" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+        </div>
+        <p class="header-left-text">Instagram</p>
+      </div>
+      <div class="header-left-text-icon web disabled">
+        <div class="svg-icon-container">
+          <svg class="platform-icon" width="14" height="14" viewBox="0 0 14 15" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M6.89 0.781738C3.08489 0.781738 0 3.86663 0 7.67174C0 11.4768 3.08489 14.5617 6.89 14.5617C10.6951 14.5617 13.78 11.4768 13.78 7.67174C13.78 3.86663 10.6951 0.781738 6.89 0.781738ZM4.6349 1.90161C3.96382 2.63149 3.43238 3.6813 3.10739 4.91577H1.33895C2.02337 3.54692 3.19925 2.46451 4.6349 1.90161ZM0.689 7.67174C0.689 6.94509 0.825643 6.25264 1.0567 5.60474H2.95398C2.82996 6.25859 2.756 6.94945 2.756 7.67174C2.756 8.39403 2.82996 9.08489 2.95374 9.73874H1.0567C0.825643 9.09084 0.689 8.39842 0.689 7.67174ZM1.33895 10.4277H3.10739C3.43259 11.6622 3.96382 12.712 4.6349 13.4419C3.19925 12.879 2.02337 11.7966 1.33895 10.4277ZM6.5455 13.8401C5.36639 13.618 4.34186 12.2726 3.81752 10.4277H6.5455V13.8401ZM6.5455 9.73874H3.65331C3.52079 9.08833 3.445 8.39312 3.445 7.67174C3.445 6.95036 3.52079 6.25514 3.65331 5.60474H6.5455V9.73874ZM6.5455 4.91574H3.81752C4.34186 3.07083 5.36639 1.72543 6.5455 1.50336V4.91574ZM12.4411 4.91574H10.6726C10.3474 3.68127 9.81618 2.63146 9.1451 1.90158C10.5808 2.46451 11.7566 3.54692 12.4411 4.91574ZM7.2345 1.50336C8.4136 1.72545 9.43814 3.07083 9.96248 4.91574H7.2345V1.50336ZM7.2345 5.60474H10.1267C10.2592 6.25514 10.335 6.95036 10.335 7.67174C10.335 8.39312 10.2592 9.08833 10.1267 9.73874H7.2345V5.60474ZM7.2345 13.8401V10.4277H9.96248C9.43814 12.2726 8.4136 13.618 7.2345 13.8401ZM9.1451 13.4419C9.81618 12.7118 10.3474 11.6622 10.6726 10.4277H12.4411C11.7566 11.7966 10.5808 12.879 9.1451 13.4419ZM10.826 9.73874C10.95 9.08489 11.024 8.39403 11.024 7.67174C11.024 6.94945 10.95 6.25859 10.8263 5.60474H12.7235C12.9544 6.25264 13.091 6.94509 13.091 7.67174C13.091 8.39842 12.9544 9.09084 12.7233 9.73874H10.826Z"
+              fill="#959595" />
+          </svg>
+        </div>
+        <p class="header-left-text">Web</p>
+      </div>
+      <div class="header-right">
+        <div class="header-texts">
+          <span class="header-title title-project-name">Sample Project |</span>
+          <span class="header-title title-report"> Project Insights</span>
+        </div>
+        <div class="header-date-box">
+          <p class="header-date">November 28, 2024 - December 28, 2024</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="main-stats-section padding-sides padding-bot-top">
+      <div class="stats-container">
+        <div class="main-stats">
+          <p class="info-title">Total Views</p>
+          <h1 class="info-number total-views-number">100,5M</h1>
+          <!-- <p class="info-alteration-rate">+14% compared to previous 28 days</p> -->
+        </div>
+        <div class="main-stats">
+          <p class="info-title">Shares</p>
+          <h1 class="info-number total-shares-number">2.5K</h1>
+          <!-- <p class="info-alteration-rate">+12% compared to previous 28 days</p> -->
+        </div>
+        <div class="main-stats">
+          <p class="info-title">Average Time Open</p>
+          <h1 class="info-number time-open-number">1m 20s</h1>
+          <!-- <p class="info-alteration-rate">+14% compared to previous 28 days</p> -->
+        </div>
+      </div>
+      <div class="project-img-container">
+        <img class="project-img" src="img/Project_IMG.png" />
+      </div>
+    </section>
+
+    <section class="top-countries-section padding-sides padding-bot-top">
+      <p class="info-title">Top Countries</p>
+      <div class="country-graph-container">
+        <div class="country-graph-lines-container">
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+          <div class="country-graph-line"></div>
+        </div>
+        <div class="country-vertical-columns">
+          <div class="country-graph-column country-graph-column-01">&#8203</div>
+          <div class="country-graph-column country-graph-column-02">&#8203</div>
+          <div class="country-graph-column country-graph-column-03">&#8203</div>
+          <div class="country-graph-column country-graph-column-04">&#8203</div>
+          <div class="country-graph-column country-graph-column-05">&#8203</div>
+        </div>
+      </div>
+      <div class="country-names-container">
+        <div class="country-bot-text-container">
+          <p class="country-name country-name-01">Country 1</p>
+          <p class="country-percentage country-percentage-01">20.23%</p>
+        </div>
+        <div class="country-bot-text-container">
+          <p class="country-name country-name-02">Country 2</p>
+          <p class="country-percentage country-percentage-02">6.22%</p>
+        </div>
+        <div class="country-bot-text-container">
+          <p class="country-name country-name-03">Country 3</p>
+          <p class="country-percentage country-percentage-03">20.05%</p>
+        </div>
+        <div class="country-bot-text-container">
+          <p class="country-name country-name-04">Country 4</p>
+          <p class="country-percentage country-percentage-04">4.12%</p>
+        </div>
+        <div class="country-bot-text-container">
+          <p class="country-name country-name-01">Country 5</p>
+          <p class="country-percentage country-percentage-05">1.34%</p>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="age-gender-section padding-sides padding-bot-top">
+      <div class="age-gender-title-header">
+        <p class="info-title">Age / Gender</p>
+        <div class="legend-container">
+          <div class="women-icon-box legand-icon-box"></div>
+          <p class="legand-text all-women-percentage">All Women 48%</p>
+          <div class="men-icon-box legand-icon-box"></div>
+          <p class="legand-text all-men-percentage">All Men 42%</p>
+        </div>
+      </div>
+      <div class="age-gender-graph-text-container">
+        <div class="age-gender-graph-container">
+          <div class="age-gender-graph-lines-container">
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+            <div class="age-gender-graph-line">&#8203</div>
+          </div>
+          <div class="age-gender-vertical-columns">
+            <div class="age-gender-column-tween age-gender-column-tween-01">
+              <div class="age-gender-graph-column age-gender-graph-column-01A">&#8203</div>
+              <div class="age-gender-graph-column age-gender-graph-column-01B">&#8203</div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-02">
+              <div class="age-gender-graph-column age-gender-graph-column-02A">&#8203</div>
+              <div class="age-gender-graph-column age-gender-graph-column-02B">&#8203</div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-03">
+              <div class="age-gender-graph-column age-gender-graph-column-03A">&#8203</div>
+              <div class="age-gender-graph-column age-gender-graph-column-03B">&#8203</div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-04">
+              <div class="age-gender-graph-column age-gender-graph-column-04A">&#8203</div>
+              <div class="age-gender-graph-column age-gender-graph-column-04B">&#8203</div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-05">
+              <div class="age-gender-graph-column age-gender-graph-column-05A">&#8203</div>
+              <div class="age-gender-graph-column age-gender-graph-column-05B">&#8203</div>
+            </div>
+          </div>
+        </div>
+        <div class="age-gender-graph-columns-sub-texts-container">
+          <div class="age-gender-texts-vertical-columns">
+            <div class="age-gender-column-tween age-gender-column-tween-01">
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-01A">
+                <p class="age-gender-subtext age-gender-subtext-women">21%</p>
+              </div>
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-01B">
+                <p class="age-gender-subtext">32%</p>
+              </div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-02">
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-02A">
+                <p class="age-gender-subtext age-gender-subtext-women">12%</p>
+              </div>
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-02B">
+                <p class="age-gender-subtext">10%</p>
+              </div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-03">
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-03A">
+                <p class="age-gender-subtext age-gender-subtext-women">1%</p>
+              </div>
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-03B">
+                <p class="age-gender-subtext">5%</p>
+              </div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-04">
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-04A">
+                <p class="age-gender-subtext age-gender-subtext-women">4%</p>
+              </div>
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-04B">
+                <p class="age-gender-subtext">7%</p>
+              </div>
+            </div>
+            <div class="age-gender-column-tween age-gender-column-tween-05">
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-05A">
+                <p class="age-gender-subtext age-gender-subtext-women">14%</p>
+              </div>
+              <div class="age-gender-text-graph-column age-gender-text-graph-column-05B">
+                <p class="age-gender-subtext">12%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="age-range-container">
+        <p class="age-range-item">13-17</p>
+        <p class="age-range-item">18-20</p>
+        <p class="age-range-item">21-24</p>
+        <p class="age-range-item">25-34</p>
+        <p class="age-range-item">35+</p>
+      </div>
+    </section>
+
+    <section class="footer-section padding-sides padding-bot-top-low">
+      <div class="qreal-logo-container">
+        <?xml version="1.0" encoding="UTF-8"?><svg class="qreal-logo-footer" id="Layer_2"
+          xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.92 652.57">
+          <g id="logo">
+            <g id="LWPOLYLINE">
+              <path
+                d="m138.42,0h197.75c10.92,0,19.77,8.85,19.77,19.77v19.77c0,10.92-8.85,19.77-19.77,19.77H118.65V19.77c0-10.92,8.85-19.77,19.77-19.77Z"
+                fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-2">
+              <path
+                d="m79.1,59.32h39.55v39.55c0,10.92-8.85,19.77-19.77,19.77h-39.55v-39.55c0-10.92,8.85-19.77,19.77-19.77Z"
+                fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-3">
+              <path
+                d="m19.77,118.65h39.55v392.2c0,12.74-8.85,23.07-19.77,23.07h-19.77c-10.92,0-19.77-10.33-19.77-23.07V141.72c0-12.74,8.85-23.07,19.77-23.07Z"
+                fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-4">
+              <path
+                d="m435.05,118.65h19.77c10.92,0,19.77,10.33,19.77,23.07v369.13c0,12.74-8.85,23.07-19.77,23.07h-39.55V141.72c0-12.74,8.85-23.07,19.77-23.07Z"
+                fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-5">
+              <path d="m375.72,533.92h39.55v59.32h-59.32v-39.55c0-10.92,8.85-19.77,19.77-19.77Z" fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-6">
+              <path
+                d="m138.42,593.25h217.52v39.55c0,10.92-8.85,19.77-19.77,19.77h-197.75c-10.92,0-19.77-8.85-19.77-19.77v-19.77c0-10.92,8.85-19.77,19.77-19.77Z"
+                fill="#d2d2d2" />
+            </g>
+            <g id="LWPOLYLINE-7">
+              <path
+                d="m415.27,593.25h98.87c10.92,0,19.77,8.85,19.77,19.77v19.77c0,10.92-8.85,19.77-19.77,19.77h-79.1c-10.92,0-19.77-8.85-19.77-19.77v-39.55Z"
+                fill="#d2d2d2" />
+            </g>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="input-fields">
+
+
+    <div class="interface-main-grid">
+
+      <div class="interface-main-grid-part-1">
+
+        <p class="interface-category-item-title">Project Info</p>
+
+        <div class="project-details-main input-category-container">
+
+          <div class="input-container">
+            <label class="input-label" for="social-media">Choose Platform</label>
+            <select class="platform-field-input">
+              <option value="snapchat">Snapchat</option>
+              <option value="instagram">Instagram</option>
+              <option value="web">Web</option>
+            </select>
+          </div>
+
+          <div class="input-container">
+            <label class="input-label">Upload Image</label>
+            <input required class="project-image-upload-input" type="file" name="file" value="uploaded-img" />
+          </div>
+
+          <div class="input-container">
+            <label class="input-label">Start Date</label>
+            <input required class="project-start-date-input project-date-input" type="date" value="2017-06-01" />
+          </div>
+
+          <div class="input-container">
+            <label class="input-label">End Date</label>
+            <input required class="project-end-date-input project-date-input" type="date" value="2017-06-01" />
+          </div>
+
+
+
+        </div>
+
+
+        <div class="project-info-field input-category-container project-general-info-container">
+          <div class="input-container">
+            <label class="input-label">Project Name</label>
+            <input required type="text" class="project-name-field-input input-field-box">
+          </div>
+          <div class="input-container">
+            <label class="input-label">Total Views</label>
+            <input required type="text" class="total-views-field input-field-box">
+          </div>
+          <div class="input-container">
+            <label class="input-label">Shares</label>
+            <input required type="text" class="total-shares-field input-field-box">
+          </div>
+          <div class="input-container">
+            <label class="input-label">Time Open (avg)</label>
+            <input required type="text" class="time-open-field input-field-box">
+          </div>
+        </div>
+
+        <div class="country-inputs input-category-container">
+
+          <p class="interface-category-item-title">Top Viewed Countries</p>
+
+          <div class="country-name-percentage-container">
+            <div class="input-container">
+              <label class="input-label">Country - 1</label>
+              <input required type="text" id="country-name-01" class="country-name-input-field input-field-box">
+            </div>
+            <div class="input-container">
+              <label class="input-label">(%)</label>
+              <input required type="number" step="0.01"
+                class=" country-percentages-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <div class="country-name-percentage-container">
+            <div class="input-container">
+              <label class="input-label" for="country-name-02">Country - 2</label>
+              <input required type="text" id="country-name-02" class="country-name-input-field input-field-box">
+            </div>
+            <div class="input-container">
+              <label class="input-label">%</label>
+              <input required type="number" step="0.01"
+                class=" country-percentages-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <div class="country-name-percentage-container">
+            <div class="input-container">
+              <label class="input-label" for="country-name-03">Country - 3</label>
+              <input required type="text" id="country-name-03" class="country-name-input-field input-field-box">
+            </div>
+            <div class="input-container">
+              <label class="input-label">%</label>
+              <input required type="number" step="0.01"
+                class="country-percentages-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <div class="country-name-percentage-container">
+            <div class="input-container">
+              <label class="input-label" for="country-name-04">Country - 4</label>
+              <input required type="text" id="country-name-04" class="country-name-input-field input-field-box">
+            </div>
+            <div class="input-container">
+              <label class="input-label">%</label>
+              <input required type="number" step="0.01"
+                class="country-percentages-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <div class="country-name-percentage-container">
+            <div class="input-container">
+              <label class="input-label" for="country-name-05">Country - 5</label>
+              <input required type="text" id="country-name-05" class="country-name-input-field input-field-box">
+            </div>
+            <div class="input-container">
+              <label class="input-label">%</label>
+              <input required type="number" step="0.01"
+                class="country-percentages-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="interface-main-grid-part-2">
+        <p class="interface-category-item-title">Age / Gender</p>
+        <div class="gender-age-inputs input-category-container">
+
+          <p class="item-subtitle general-ratio-all">General Ratio (All)</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="all-women-percentage-input input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="all-men-percentage-input input-field-box percentages-input-field">
+            </div>
+          </div>
+
+          <p class="item-subtitle">13-17 Age</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <p class="item-subtitle">18-20 Age</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+          <p class="item-subtitle">21-24 Age</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+
+          <p class="item-subtitle">25-34 Age</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+
+          <p class="item-subtitle">35+ Age</p>
+          <div class="age-gender-age-range-box">
+            <div class="input-container">
+              <label class="input-label">Women (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+            <div class="input-container">
+              <label class="input-label">Men (%)</label>
+              <input required type="number" step="0.01"
+                class="age-gender-input-field input-field-box percentages-input-field">
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="button-container">
+      <button class="input-field-button interface-button">Apply Changes</button>
+      <button class="export-button interface-button">Export Image</button>
+    </div>
+
+  </div>
+
+
+</body>

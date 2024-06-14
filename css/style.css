@@ -1,0 +1,618 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+@font-face {
+  font-family: "Crystal";
+  src: url("../fonts/Crystal-VF.ttf"), format("ttf");
+}
+
+:root {
+  --font-crystal-regular: 400 normal 1.6rem/4rem "Crystal", sans-serif;
+}
+
+body {
+  font-family: "Crystal";
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 400;
+  width: 57.4rem;
+  background-color: white;
+}
+
+.padding-sides {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.padding-bot-top {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.padding-bot-top-low {
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.disabled {
+  display: none !important;
+}
+
+/***********/
+/* HEADER */
+/***********/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.header-left-text-icon {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-left-text {
+  display: block;
+  position: relative;
+  padding-top: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #959595;
+}
+
+.svg-icon-container {
+  width: 1.4rem;
+  display: flex;
+}
+
+.platform-icon {
+  height: 100%;
+  height: auto;
+  align-self: center;
+}
+
+.header-title {
+  font-size: 1.2rem;
+}
+.title-project-name {
+  font-weight: 500;
+}
+.title-report {
+  font-weight: 300;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+  align-items: end;
+}
+
+.header-date {
+  color: #959595;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.4rem;
+}
+
+/***********/
+/* MAIN STATS SECTION */
+/***********/
+
+.main-stats-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: auto;
+}
+
+.main-stats {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.info-title {
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+
+.info-number {
+  font-size: 6.5rem;
+  font-weight: 400;
+}
+
+.info-alteration-rate {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ffffff;
+  background-color: black;
+  padding: 0.8rem;
+  border-radius: 999px;
+  font-weight: 300;
+}
+
+.project-img-container {
+  /* height: auto; */
+  /* aspect-ratio: 9 / 16; */
+  height: 33.422rem;
+  border-radius: 2rem;
+  width: 18.8rem;
+  overflow: hidden;
+  justify-self: end;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    width: 100%;
+  }
+}
+
+/***********/
+/* TOP COUNTRIES SECTION */
+/***********/
+
+.top-countries-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.country-names-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.country-name {
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 9.72rem;
+  text-align: center;
+}
+
+.country-percentage {
+  font-size: 2.6rem;
+  font-weight: 400;
+  width: 9.72rem;
+  text-align: center;
+}
+
+.country-graph-container {
+  position: relative;
+  height: 18rem;
+}
+
+.country-vertical-columns {
+  height: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(101, 1fr);
+  grid-column-gap: 1.2rem;
+}
+
+.country-graph-column {
+  width: auto;
+  height: 100%;
+  border-radius: 999px;
+  background-color: #000000;
+  min-height: 0.001rem;
+  z-index: 2;
+  position: relative;
+}
+
+.country-graph-column-01 {
+  grid-row: 1/ 12;
+}
+
+.country-graph-column-02 {
+  grid-row: -1/ -6;
+}
+
+.country-graph-column-03 {
+  grid-row: -1/ -5;
+}
+
+.country-graph-column-04 {
+  grid-row: -1/ -4;
+}
+
+.country-graph-column-05 {
+  grid-row: -1/ -3;
+}
+
+.country-bot-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.country-graph-lines-container {
+  position: absolute;
+  display: flex;
+  gap: 8.5rem;
+  flex-direction: column;
+  height: 101%;
+  width: 100%;
+  bottom: -0.01%;
+  justify-content: flex-end;
+  /* clip-path: inset(-2px 0 0 0); */
+  /* background-color: red; */
+  overflow: hidden;
+}
+
+.country-graph-line {
+  position: relative;
+  z-index: 1;
+  border-bottom: 0.1rem dashed #d2d2d2;
+  height: 0;
+  /* margin-top: -0.2px; */
+}
+
+/***********/
+/* AGE GENDER SECTION */
+/***********/
+
+.age-gender-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.age-gender-graph-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.age-gender-title-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.legend-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.legand-text {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 0.18rem;
+}
+
+.legand-icon-box {
+  height: 1.1rem;
+  width: 1.1rem;
+}
+
+.women-icon-box {
+  background-color: #000000;
+}
+
+.men-icon-box {
+  border: 0.1rem solid black;
+}
+
+.age-gender-graph-container {
+  position: relative;
+  height: 18rem;
+}
+
+.age-gender-vertical-columns {
+  height: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1.2rem;
+}
+
+.age-gender-column-tween {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(101, 1fr);
+  grid-column-gap: 0.4rem;
+  min-height: 0.001rem;
+}
+
+.age-gender-graph-column {
+  position: relative;
+  width: auto;
+  height: 100%;
+  border-radius: 999px 999px 0 0;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.age-gender-graph-column {
+  grid-row: 1 /-1;
+}
+
+.age-gender-graph-column-01B,
+.age-gender-graph-column-02B,
+.age-gender-graph-column-03B,
+.age-gender-graph-column-04B,
+.age-gender-graph-column-05B {
+  background-color: white;
+  border-top: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  border-left: 0.1rem solid black;
+}
+
+/* GRAPH LINES */
+
+.age-gender-graph-lines-container {
+  position: absolute;
+  display: flex;
+  gap: 2rem;
+  height: 101%;
+  bottom: -0.01%;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
+  /* clip-path: inset(-2px 0 0 0); */
+  overflow: hidden;
+}
+
+.age-gender-graph-line {
+  border-bottom: 0.1rem dashed #d2d2d2;
+  height: 0;
+}
+
+/* SUB-TEXTS */
+
+.age-gender-graph-columns-sub-texts-container {
+  height: 3rem;
+}
+
+.age-gender-texts-vertical-columns {
+  height: auto;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 1.2rem;
+}
+
+.age-gender-text-graph-column {
+  position: relative;
+  width: auto;
+  height: 100%;
+  border-radius: 0 0 999px 999px;
+  background-color: #000000;
+  grid-row: 1 / -1;
+}
+
+.age-gender-text-graph-column-01B,
+.age-gender-text-graph-column-02B,
+.age-gender-text-graph-column-03B,
+.age-gender-text-graph-column-04B,
+.age-gender-text-graph-column-05B {
+  background-color: white;
+  border-bottom: 0.1rem solid black;
+  border-right: 0.1rem solid black;
+  border-left: 0.1rem solid black;
+}
+
+.age-gender-subtext {
+  position: absolute;
+  text-align: center;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 300;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.age-gender-subtext-women {
+  color: white;
+}
+
+.age-range-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.age-range-item {
+  font-size: 1.2rem;
+  font-weight: 300;
+  width: 9.72rem;
+  text-align: center;
+}
+
+/***********/
+/* FOOTER SECTION */
+/***********/
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qreal-logo-container {
+  height: 3rem;
+}
+
+.qreal-logo-footer {
+  height: 100%;
+  width: auto;
+}
+
+/***********/
+/* INPUTS */
+/***********/
+
+.input-fields {
+  font-size: 1.2rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  position: absolute;
+  background-color: white;
+  left: 80rem;
+  top: 2rem;
+}
+
+.project-general-info-container {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-date-input,
+.platform-field-input {
+  /* width: 15.3rem; */
+  height: 2.4rem;
+  flex-grow: 1;
+}
+
+.input-field-box {
+  /* all: unset; */
+  border: 1px solid #a4a4a4;
+  border-radius: 0.6rem;
+  width: 8rem;
+  height: 2.4rem;
+  padding-left: 0.6rem;
+  flex-grow: 1;
+  margin-bottom: 0.6rem;
+}
+
+.platform-field-input,
+.project-date-input {
+  font-family: "Crystal";
+  font-size: 1.2rem;
+  font-weight: 300;
+  border: 1px solid #a4a4a4;
+  border-radius: 0.6rem;
+  padding-left: 0.3rem;
+  margin-bottom: 0.6rem;
+}
+.project-image-upload-input {
+  font-family: "Crystal";
+  font-weight: 300;
+  font-size: 1.2rem;
+  width: 17rem;
+  margin-bottom: 0.6rem;
+}
+
+.input-label {
+  font-family: "Crystal";
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.input-category-container {
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.3rem; */
+  padding-bottom: 2rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.country-name-percentage-container {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.interface-category-item-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.age-gender-age-range-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.item-subtitle {
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
+.interface-main-grid {
+  display: flex;
+  flex-direction: row;
+  gap: 4rem;
+}
+
+.interface-main-grid-part-1 {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+}
+
+.interface-main-grid-part-2 {
+  height: auto;
+  padding-bottom: 2.6rem;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.general-ratio-all {
+  margin-top: 0 !important;
+}
+
+.interface-button {
+  all: unset;
+  font-family: "Crystal";
+  font-size: 1.2rem;
+  height: 3rem;
+  border: 1px solid #c2c2c2;
+  background-color: #f6f6f6;
+  text-align: center;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 300;
+  transition: backgorund-color, 0.15s;
+}
+
+.page-link:link,
+.page-link:visited {
+  background-color: #f6f6f6;
+}
+
+.interface-button:hover,
+.interface-button:active {
+  background-color: #323232;
+  color: white;
+  border: 1px solid #323232;
+}
